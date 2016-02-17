@@ -122,7 +122,7 @@ namespace Image2CSharp
                 stringBuilder.AppendLine(("public static Image " + image + "()").PadLeft(8))
                     .AppendLine("{".PadLeft(8))
                     .AppendLine("return GetIconFromBase64DataUri(".PadLeft(12))
-                    .AppendLine(("\"" + _convertedImages[image] + "\"); ").PadLeft(16))
+                    .AppendLine(("\"data:image/png;base64," + _convertedImages[image] + "\"); ").PadLeft(16))
                     .AppendLine("}".PadLeft(8))
                     .AppendLine();
             }
